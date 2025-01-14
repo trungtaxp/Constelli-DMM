@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.IO.Ports;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Security;
@@ -19,16 +20,25 @@ namespace Constelli_DMM
 {
     public partial class Form1 : Form
     {
+        //Com Port Data reader
+        SerialPort ComPort = new SerialPort();
+
+        internal delegate void SerialDataReceivedEventHandlerDelegate(object sender, SerialDataReceivedEventArgs e);
+        internal delegate void SerialPinChangedEventHandlerDelegate(object sender, SerialPinChangedEventArgs e);
+        private SerialPinChangedEventHandler SerialPinChangedEventHandler1;
+        delegate void SetTextCallback(string text);
+        string InputData = String.Empty;
+        //
         private const int MAX_LINES = 100;
         private string unit_label = "";
         private string _ReceiveMonitor = "";
-        string[] functions = { "DCV", "ACV", "DCI", "ACI", "2W Ω", "4W Ω", "Freq", "Temp", "Period", "Cap", "Cont", "Diode", "Ratio" };
+        string[] functions = { "DCV", "ACV", "DCI", "ACI", "2W Ω", "4W Ω", "Freq", "Temp", "Period", "Cap", "Cont", "Diode", "Ratio", "Tacho" };//, 
         private double result = 0;
         private double expect_result = 0;
         private double error = 0;
         int funcX = 150, funcY = 320;
         int i = 0;
-        Button[] functionButton = new Button[13];
+        Button[] functionButton = new Button[14];
         private XmlDocument itemDoc = new XmlDocument();
 
         string _BTC_Connection = FunctionForSystem._BTC_Connection;
@@ -47,7 +57,115 @@ namespace Constelli_DMM
             InitializeComponent();
             Ini_UI();
             BTC_Connect();
+            ComPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(port_DataReceived_1);
+            GetPort();
         }
+        #region Com Port Data Reader
+        
+        private void GetPort()
+        {
+            string[] ArrayComPortsNames = SerialPort.GetPortNames();
+            if (ArrayComPortsNames.Length == 0)
+            {
+                MessageBox.Show("No COM ports found.");
+                return;
+            }
+        
+            int index = -1;
+            string ComPortName = null;
+        
+            do
+            {
+                index += 1;
+                cboPorts.Items.Add(ArrayComPortsNames[index]);
+            } while (!((ArrayComPortsNames[index] == ComPortName) || (index == ArrayComPortsNames.GetUpperBound(0))));
+            Array.Sort(ArrayComPortsNames);
+        
+            if (index == ArrayComPortsNames.GetUpperBound(0))
+            {
+                ComPortName = ArrayComPortsNames[0];
+            }
+            cboPorts.Text = ArrayComPortsNames[0];
+        }
+
+        static byte[] ReadBinaryResponse(SerialPort serialPort)
+        {
+            byte[] buffer = new byte[16]; // Adjust size based on expected response length
+            int bytesRead = 0;
+            DateTime timeout = DateTime.Now.AddSeconds(6); // Set a timeout of 2 seconds
+
+            while (DateTime.Now < timeout)
+            {
+                if (serialPort.BytesToRead > 0)
+                {
+                    bytesRead += serialPort.Read(buffer, bytesRead, buffer.Length - bytesRead);
+                    if (buffer[bytesRead - 1] == 0x0D) // Stop reading if CR (0x0D) is received
+                    {
+                        break;
+                    }
+                }
+            }
+
+            // Trim the buffer to the actual received data length
+            byte[] result = new byte[bytesRead];
+            Array.Copy(buffer, result, bytesRead);
+
+            return result;
+        }
+
+        private void port_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
+        {
+
+            byte[] response = ReadBinaryResponse(ComPort);
+            InputData = System.Text.Encoding.ASCII.GetString(response);
+
+            if (InputData != String.Empty)
+            {
+                try
+                {
+                    InputData = InputData.Substring(5, InputData.Length - 7) + unit_label;
+                }
+                catch { }
+                this.BeginInvoke(new SetTextCallback(SetText), new object[] { InputData });
+                
+            }
+        }
+        private void SetText(string text)
+        {
+            this.measurementLabel.Text = text ;
+        }
+        private void ReadData_Click(object sender, EventArgs e)
+        {
+            Read_Data_Tacho();
+        }
+        private void Read_Data_Tacho()
+        {
+            byte[] command = new byte[] { 0x02, (byte)'C', (byte)'C', (byte)'D', 0x0D }; // STX + "CSD" + CR
+
+            // Send the binary command
+            ComPort.Write(command, 0, command.Length);
+        }
+        private void btnPortState_Click_1(object sender, EventArgs e)
+        {
+
+            if (btnPortState.Text == "Closed")
+            {
+                btnPortState.Text = "Open";
+                ComPort.PortName = Convert.ToString(cboPorts.Text);
+                ComPort.BaudRate = Convert.ToInt32("38400");
+                ComPort.DataBits = Convert.ToInt16("8");
+                ComPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), "One");
+                ComPort.Handshake = (Handshake)Enum.Parse(typeof(Handshake), "None");
+                ComPort.Parity = (Parity)Enum.Parse(typeof(Parity), "None");
+                ComPort.Open();
+            }
+            else if (btnPortState.Text == "Open")
+            {
+                btnPortState.Text = "Closed";
+                ComPort.Close();
+            }
+        }       
+        #endregion
         private void BTC_Connect()
         {
             try //separate try-catch for specan initialization prevents accessing uninitialized object
@@ -327,7 +445,7 @@ namespace Constelli_DMM
         private void Switch_Meas_for_run(string measuremnt)
         {
             foreach (var funbutton in functionButton) { funbutton.Enabled = false; funbutton.BackColor = Color.White; }
-            switch (measuremnt)//functions = { "DCV", "ACV", "DCI", "ACI", "2W Ω", "4W Ω", "Freq", "Temp", "Period", "Cap", "Cont", "Diode", "Ratio" }
+            switch (measuremnt)//functions = { "DCV", "ACV", "DCI", "ACI", "2W Ω", "4W Ω", "Freq", "Temp", "Period", "Cap", "Cont", "Diode", "Ratio" , "Tacho" }
             {
                 case "DCV":
                     unit_label = "V";
@@ -419,6 +537,12 @@ namespace Constelli_DMM
                     SetRatio();
                     foreach (var funbutton in functionButton) funbutton.Enabled = true;
                     functionButton[12].BackColor = Color.Yellow;
+                    break;
+                case "Tacho":
+                    unit_label = "rev/min";
+                    Read_Data_Tacho();
+                    foreach (var funbutton in functionButton) funbutton.Enabled = true;
+                    functionButton[13].BackColor = Color.Yellow;
                     break;
                 default:
                     foreach (var funbutton in functionButton) funbutton.Enabled = true;
@@ -521,6 +645,8 @@ namespace Constelli_DMM
         {
             FetchMeasurement();
         }
+
+        
 
         private void Ini_UI()
         {

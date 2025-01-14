@@ -41,6 +41,9 @@ namespace Constelli_DMM
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ReceiveMntText = new System.Windows.Forms.TextBox();
             this.fetchButton = new System.Windows.Forms.Button();
+            this.cboPorts = new System.Windows.Forms.ComboBox();
+            this.btnPortState = new System.Windows.Forms.Button();
+            this.ReadData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +125,7 @@ namespace Constelli_DMM
             this.ReceiveMntText.Name = "ReceiveMntText";
             this.ReceiveMntText.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ReceiveMntText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.ReceiveMntText.Size = new System.Drawing.Size(316, 224);
+            this.ReceiveMntText.Size = new System.Drawing.Size(316, 177);
             this.ReceiveMntText.TabIndex = 48;
             this.ReceiveMntText.WordWrap = false;
             // 
@@ -137,10 +140,41 @@ namespace Constelli_DMM
             this.fetchButton.UseVisualStyleBackColor = true;
             this.fetchButton.Click += new System.EventHandler(this.fetchButton_Click);
             // 
+            // cboPorts
+            // 
+            this.cboPorts.FormattingEnabled = true;
+            this.cboPorts.Location = new System.Drawing.Point(355, 9);
+            this.cboPorts.Name = "cboPorts";
+            this.cboPorts.Size = new System.Drawing.Size(121, 21);
+            this.cboPorts.TabIndex = 50;
+            // 
+            // btnPortState
+            // 
+            this.btnPortState.Location = new System.Drawing.Point(482, 7);
+            this.btnPortState.Name = "btnPortState";
+            this.btnPortState.Size = new System.Drawing.Size(75, 23);
+            this.btnPortState.TabIndex = 51;
+            this.btnPortState.Text = "Closed";
+            this.btnPortState.UseVisualStyleBackColor = true;
+            this.btnPortState.Click += new System.EventHandler(this.btnPortState_Click_1);
+            // 
+            // ReadData
+            // 
+            this.ReadData.Location = new System.Drawing.Point(563, 7);
+            this.ReadData.Name = "ReadData";
+            this.ReadData.Size = new System.Drawing.Size(75, 23);
+            this.ReadData.TabIndex = 52;
+            this.ReadData.Text = "Read Data";
+            this.ReadData.UseVisualStyleBackColor = true;
+            this.ReadData.Click += new System.EventHandler(this.ReadData_Click);
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1221, 565);
+            this.ClientSize = new System.Drawing.Size(1259, 518);
+            this.Controls.Add(this.ReadData);
+            this.Controls.Add(this.btnPortState);
+            this.Controls.Add(this.cboPorts);
             this.Controls.Add(this.fetchButton);
             this.Controls.Add(this.ReceiveMntText);
             this.Controls.Add(this.pictureBox1);
@@ -170,6 +204,9 @@ namespace Constelli_DMM
         private OpenFileDialog openFileDialog1;
         private TextBox ReceiveMntText;
         private Button fetchButton;
+        private ComboBox cboPorts;
+        private Button btnPortState;
+        private Button ReadData;
     }
 }
 
