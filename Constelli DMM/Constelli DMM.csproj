@@ -36,9 +36,11 @@
     <Reference Include="Ivi.Visa, Version=5.11.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\IVI Foundation\VISA\Microsoft.NET\Framework32\v2.0.50727\VISA.NET Shared Components 5.11.0\Ivi.Visa.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="IviVisaExtended">
       <HintPath>..\..\..\..\Downloads\RF_Spark_Auto_Test\RF_Spark_Auto_Test\RF_Spark_Auto_Test\bin\Debug\IviVisaExtended.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
