@@ -44,7 +44,11 @@ namespace Constelli_DMM
             this.cboPorts = new System.Windows.Forms.ComboBox();
             this.btnPortState = new System.Windows.Forms.Button();
             this.ReadData = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -58,11 +62,10 @@ namespace Constelli_DMM
             this.headerLabel.BackColor = System.Drawing.Color.Green;
             this.headerLabel.Font = new System.Drawing.Font("Arial", 12F);
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(10, 14);
+            this.headerLabel.Location = new System.Drawing.Point(11, 37);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(150, 18);
+            this.headerLabel.Size = new System.Drawing.Size(0, 18);
             this.headerLabel.TabIndex = 0;
-            this.headerLabel.Text = "GENERATOR TEST";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // powerButton
@@ -70,7 +73,7 @@ namespace Constelli_DMM
             this.powerButton.BackColor = System.Drawing.Color.Green;
             this.powerButton.Enabled = false;
             this.powerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.powerButton.Location = new System.Drawing.Point(20, 51);
+            this.powerButton.Location = new System.Drawing.Point(21, 74);
             this.powerButton.Name = "powerButton";
             this.powerButton.Size = new System.Drawing.Size(25, 25);
             this.powerButton.TabIndex = 1;
@@ -80,7 +83,7 @@ namespace Constelli_DMM
             // 
             this.powerLabel.AutoSize = true;
             this.powerLabel.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.powerLabel.Location = new System.Drawing.Point(51, 54);
+            this.powerLabel.Location = new System.Drawing.Point(52, 77);
             this.powerLabel.Name = "powerLabel";
             this.powerLabel.Size = new System.Drawing.Size(64, 18);
             this.powerLabel.TabIndex = 2;
@@ -91,7 +94,7 @@ namespace Constelli_DMM
             this.btnMeasureByPost.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMeasureByPost.AutoSize = true;
             this.btnMeasureByPost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnMeasureByPost.Location = new System.Drawing.Point(180, 11);
+            this.btnMeasureByPost.Location = new System.Drawing.Point(181, 32);
             this.btnMeasureByPost.Name = "btnMeasureByPost";
             this.btnMeasureByPost.Size = new System.Drawing.Size(109, 25);
             this.btnMeasureByPost.TabIndex = 3;
@@ -102,7 +105,7 @@ namespace Constelli_DMM
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Constelli_DMM.Properties.Resources.DCV;
-            this.pictureBox1.Location = new System.Drawing.Point(913, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(908, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(316, 188);
             this.pictureBox1.TabIndex = 4;
@@ -122,7 +125,7 @@ namespace Constelli_DMM
             this.ReceiveMntText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReceiveMntText.ForeColor = System.Drawing.SystemColors.WindowText;
             this.ReceiveMntText.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.ReceiveMntText.Location = new System.Drawing.Point(913, 245);
+            this.ReceiveMntText.Location = new System.Drawing.Point(908, 242);
             this.ReceiveMntText.MaxLength = 60000;
             this.ReceiveMntText.Multiline = true;
             this.ReceiveMntText.Name = "ReceiveMntText";
@@ -137,7 +140,7 @@ namespace Constelli_DMM
             this.fetchButton.AutoSize = true;
             this.fetchButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.fetchButton.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.fetchButton.Location = new System.Drawing.Point(1021, 473);
+            this.fetchButton.Location = new System.Drawing.Point(1016, 455);
             this.fetchButton.Name = "fetchButton";
             this.fetchButton.Size = new System.Drawing.Size(101, 32);
             this.fetchButton.TabIndex = 49;
@@ -148,7 +151,7 @@ namespace Constelli_DMM
             // cboPorts
             // 
             this.cboPorts.FormattingEnabled = true;
-            this.cboPorts.Location = new System.Drawing.Point(321, 13);
+            this.cboPorts.Location = new System.Drawing.Point(322, 34);
             this.cboPorts.Name = "cboPorts";
             this.cboPorts.Size = new System.Drawing.Size(132, 21);
             this.cboPorts.TabIndex = 50;
@@ -156,7 +159,7 @@ namespace Constelli_DMM
             // btnPortState
             // 
             this.btnPortState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnPortState.Location = new System.Drawing.Point(476, 12);
+            this.btnPortState.Location = new System.Drawing.Point(477, 33);
             this.btnPortState.Name = "btnPortState";
             this.btnPortState.Size = new System.Drawing.Size(75, 23);
             this.btnPortState.TabIndex = 51;
@@ -167,13 +170,37 @@ namespace Constelli_DMM
             // ReadData
             // 
             this.ReadData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.ReadData.Location = new System.Drawing.Point(566, 12);
+            this.ReadData.Location = new System.Drawing.Point(567, 33);
             this.ReadData.Name = "ReadData";
             this.ReadData.Size = new System.Drawing.Size(75, 23);
             this.ReadData.TabIndex = 52;
             this.ReadData.Text = "Read Data";
             this.ReadData.UseVisualStyleBackColor = true;
             this.ReadData.Click += new System.EventHandler(this.ReadData_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFile});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1259, 24);
+            this.menuStrip1.TabIndex = 53;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mnuFile
+            // 
+            this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.smnuAbout});
+            this.mnuFile.Name = "mnuFile";
+            this.mnuFile.Size = new System.Drawing.Size(37, 20);
+            this.mnuFile.Text = "File";
+            // 
+            // smnuAbout
+            // 
+            this.smnuAbout.Name = "smnuAbout";
+            this.smnuAbout.Size = new System.Drawing.Size(180, 22);
+            this.smnuAbout.Text = "About";
             // 
             // Form1
             // 
@@ -189,12 +216,16 @@ namespace Constelli_DMM
             this.Controls.Add(this.powerLabel);
             this.Controls.Add(this.powerButton);
             this.Controls.Add(this.headerLabel);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONSTELLI";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,6 +245,9 @@ namespace Constelli_DMM
         private ComboBox cboPorts;
         private Button btnPortState;
         private Button ReadData;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem mnuFile;
+        private ToolStripMenuItem smnuAbout;
     }
 }
 

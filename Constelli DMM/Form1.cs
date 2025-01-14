@@ -648,9 +648,9 @@ namespace Constelli_DMM
             FetchMeasurement();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void smnuConstelli_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Ini_UI()
@@ -688,7 +688,7 @@ namespace Constelli_DMM
             // Display Panel
             Panel displayPanel = new Panel
             {
-                Location = new Point(150, 50),
+                Location = new Point(150, 65),
                 Size = new Size(700, 250),
                 BackColor = Color.Black,
                 BorderStyle = BorderStyle.FixedSingle
