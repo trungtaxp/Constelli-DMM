@@ -32,7 +32,7 @@ namespace Constelli_DMM
         private const int MAX_LINES = 100;
         private string unit_label = "";
         private string _ReceiveMonitor = "";
-        string[] functions = { "DCV", "ACV", "DCI", "ACI", "2W Ω", "4W Ω", "Freq", "Temp", "Period", "Cap", "Cont", "Diode", "Ratio", "Tacho" };//, 
+        string[] functions = { "DCV", "ACV", "DCI", "ACI", "2W Ω", "4W Ω", "Freq", "Temp", "Period", "Cap", "Cont", "Diode", "Ratio", "Tacho" };
         private double result = 0;
         private double expect_result = 0;
         private double error = 0;
@@ -52,6 +52,7 @@ namespace Constelli_DMM
         public static List<double> _List_freq = new List<double>();
         public static List<double> _List_OffsetPower = new List<double>();
         private int Counting = 100;
+
         public Form1()
         {
             InitializeComponent();
@@ -60,6 +61,7 @@ namespace Constelli_DMM
             ComPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(port_DataReceived_1);
             GetPort();
         }
+
         #region Com Port Data Reader
         
         private void GetPort()
@@ -550,7 +552,7 @@ namespace Constelli_DMM
                     break;
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnMeasureByPost_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -646,11 +648,15 @@ namespace Constelli_DMM
             FetchMeasurement();
         }
 
-        
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void Ini_UI()
         {
-            string[] leftButtons = { "HOME", "MENU", "APPS", "HELP" };
+
+            /*string[] leftButtons = { "HOME", "MENU", "APPS", "HELP" };
             int leftButtonY = 90;
 
             foreach (var text in leftButtons)
@@ -677,7 +683,7 @@ namespace Constelli_DMM
                 ForeColor = Color.White,
                 Font = new Font("Arial", 8, FontStyle.Bold)
             };
-            this.Controls.Add(usbLabel);
+            this.Controls.Add(usbLabel);*/
 
             // Display Panel
             Panel displayPanel = new Panel
@@ -747,6 +753,7 @@ namespace Constelli_DMM
             };
             fetchButton.Click += FetchMeasurement;
             this.Controls.Add(fetchButton);*/
+
         }
     }
 }
