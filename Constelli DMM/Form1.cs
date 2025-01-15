@@ -676,6 +676,7 @@ namespace Constelli_DMM
         private void smnuAbout_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
+            aboutForm.StartPosition = FormStartPosition.CenterScreen;
             aboutForm.ShowDialog();
         }
 

@@ -26,11 +26,11 @@ namespace Constelli_DMM.Helpers
             // 
             this.lblSoftwareInfo.AutoSize = true;
             this.lblSoftwareInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblSoftwareInfo.Location = new System.Drawing.Point(20, 91);
+            this.lblSoftwareInfo.Location = new System.Drawing.Point(64, 91);
             this.lblSoftwareInfo.Name = "lblSoftwareInfo";
-            this.lblSoftwareInfo.Size = new System.Drawing.Size(282, 25);
+            this.lblSoftwareInfo.Size = new System.Drawing.Size(194, 25);
             this.lblSoftwareInfo.TabIndex = 0;
-            this.lblSoftwareInfo.Text = "Software: GENERATOR TEST";
+            this.lblSoftwareInfo.Text = "GENERATOR TEST";
             // 
             // lblVersion
             // 
@@ -67,7 +67,7 @@ namespace Constelli_DMM.Helpers
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(22, 262);
+            this.label1.Location = new System.Drawing.Point(21, 262);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(281, 25);
             this.label1.TabIndex = 4;

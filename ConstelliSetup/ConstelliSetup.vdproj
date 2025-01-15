@@ -15,32 +15,44 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_45F112F51F5799E42BB064DE7E73EB04"
-        "OwnerKey" = "8:_6513263E52EE4F9E9CC150A83F830636"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_45F112F51F5799E42BB064DE7E73EB04"
-        "OwnerKey" = "8:_CDF152231C2930CAAE9DBFB75D647B51"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6513263E52EE4F9E9CC150A83F830636"
+        "MsmKey" = "8:_19BA1B75553943F9A4D5128F8B225FEF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CDF152231C2930CAAE9DBFB75D647B51"
-        "OwnerKey" = "8:_6513263E52EE4F9E9CC150A83F830636"
+        "MsmKey" = "8:_2E096AD6B0234A858191093DFA7F8CC7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_45F112F51F5799E42BB064DE7E73EB04"
+        "OwnerKey" = "8:_73A860307BBD4E04B8BE9773CE57A640"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_45F112F51F5799E42BB064DE7E73EB04"
+        "OwnerKey" = "8:_54F07EFDC6B9BCBF169B704320040DDD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_54F07EFDC6B9BCBF169B704320040DDD"
+        "OwnerKey" = "8:_73A860307BBD4E04B8BE9773CE57A640"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_73A860307BBD4E04B8BE9773CE57A640"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_F5175A2350E50CE0F0A857ED5CAAF842"
-        "OwnerKey" = "8:_6513263E52EE4F9E9CC150A83F830636"
+        "OwnerKey" = "8:_73A860307BBD4E04B8BE9773CE57A640"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,13 +64,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6513263E52EE4F9E9CC150A83F830636"
+        "OwnerKey" = "8:_73A860307BBD4E04B8BE9773CE57A640"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CDF152231C2930CAAE9DBFB75D647B51"
+        "OwnerKey" = "8:_54F07EFDC6B9BCBF169B704320040DDD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -92,6 +104,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -116,6 +136,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -146,6 +174,46 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_19BA1B75553943F9A4D5128F8B225FEF"
+            {
+            "SourcePath" = "8:..\\..\\3-1-Frequency_DVB-T2.xml"
+            "TargetName" = "8:3-1-Frequency_DVB-T2.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_121283FA6F47442FA654E32DEAAC8897"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E096AD6B0234A858191093DFA7F8CC7"
+            {
+            "SourcePath" = "8:C:\\Users\\trungtaxp\\Downloads\\build\\constelli.ico"
+            "TargetName" = "8:constelli.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_A037023709754231AE3A3650822E837E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_45F112F51F5799E42BB064DE7E73EB04"
             {
             "AssemblyRegister" = "3:1"
@@ -162,7 +230,7 @@
             "SourcePath" = "8:Ivi.Visa.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_B620783288AB457D87161E8E0C4B4E11"
+            "Folder" = "8:_63FEF7703D2545079CC1E9CF56C69764"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -177,14 +245,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CDF152231C2930CAAE9DBFB75D647B51"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_54F07EFDC6B9BCBF169B704320040DDD"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:IviVisaExtended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CDF152231C2930CAAE9DBFB75D647B51"
+                    "_54F07EFDC6B9BCBF169B704320040DDD"
                     {
                     "Name" = "8:IviVisaExtended.dll"
                     "Attributes" = "3:512"
@@ -193,7 +261,7 @@
             "SourcePath" = "8:IviVisaExtended.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_B620783288AB457D87161E8E0C4B4E11"
+            "Folder" = "8:_63FEF7703D2545079CC1E9CF56C69764"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -224,7 +292,7 @@
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_B620783288AB457D87161E8E0C4B4E11"
+            "Folder" = "8:_63FEF7703D2545079CC1E9CF56C69764"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -277,15 +345,48 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_B620783288AB457D87161E8E0C4B4E11"
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_63FEF7703D2545079CC1E9CF56C69764"
                     {
                     "Name" = "8:Systems"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
-                    "Property" = "8:_69CDCD8224DA4665AE1DCAC8C3919233"
+                    "Property" = "8:_7D1C03BC89614D7FBD5811A1E5415D75"
                         "Folders"
                         {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_E49710A18890472AAA44F22689BFB6B3"
+                    {
+                    "Name" = "8:LoadConfiguration"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_23C6091FD1004E5892988B766ED275E1"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_121283FA6F47442FA654E32DEAAC8897"
+                            {
+                            "Name" = "8:InPut"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_7B27374C480A47BE96F6395AB3F4015A"
+                                "Folders"
+                                {
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_4B449069B15940EABDDD1FA5D66E4181"
+                            {
+                            "Name" = "8:OutPut"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_9EAC24705A3F42E7911B577C86A16243"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                 }
@@ -427,6 +528,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D94A85F304D044E88ECCCC359DCFF9B2"
+            {
+            "Name" = "8:GeneratorTest"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_73A860307BBD4E04B8BE9773CE57A640"
+            "Folder" = "8:_2584A990E12148D8BCF3422E1D34C905"
+            "WorkingFolder" = "8:_A037023709754231AE3A3650822E837E"
+            "Icon" = "8:_2E096AD6B0234A858191093DFA7F8CC7"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F8FC8B26AD074A16A2066FE3DE10E061"
+            {
+            "Name" = "8:GeneratorTest"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_73A860307BBD4E04B8BE9773CE57A640"
+            "Folder" = "8:_4FC6DC5448664B17B37D4893D6259D86"
+            "WorkingFolder" = "8:_A037023709754231AE3A3650822E837E"
+            "Icon" = "8:_2E096AD6B0234A858191093DFA7F8CC7"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
@@ -826,9 +955,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6513263E52EE4F9E9CC150A83F830636"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_73A860307BBD4E04B8BE9773CE57A640"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\Constelli DMM\\obj\\Release\\Constelli DMM.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_A037023709754231AE3A3650822E837E"
