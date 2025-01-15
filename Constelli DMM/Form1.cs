@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Constelli_DMM.Helpers;
 using Ivi.Visa; //This .NET assembly is installed with your NI VISA installation
 using IviVisaExtended; //Custom extention functions for Ivi.Visa - all are defined in the IviVisaExtended Project
 
@@ -651,6 +652,12 @@ namespace Constelli_DMM
         private void smnuConstelli_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void smnuAbout_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();
         }
 
         private void Ini_UI()
