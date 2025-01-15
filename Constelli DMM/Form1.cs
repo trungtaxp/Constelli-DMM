@@ -568,12 +568,29 @@ namespace Constelli_DMM
 
             string csvLine = $"{measurementType},{result},{expected},{error},{status}";
 
-            if (!File.Exists(csvFilePath))
+            int retryCount = 3;
+            while (retryCount > 0)
             {
                 File.WriteAllText(csvFilePath, "Measurement Type,Result,Expected,Error,Status\n");
+                try
+                {
+                    using (var fileStream = new FileStream(csvFilePath, FileMode.Append, FileAccess.Write, FileShare.None))
+                    using (var writer = new StreamWriter(fileStream))
+                    {
+                        if (fileStream.Length == 0)
+                        {
+                            writer.WriteLine("Measurement Type,Result,Expected,Error,Status");
+                        }
+                        writer.WriteLine(csvLine);
+                    }
+                    break; // Exit loop if successful
+                }
+                catch (IOException)
+                {
+                    retryCount--;
+                    System.Threading.Thread.Sleep(1000); // Wait before retrying
+                }
             }
-
-            File.AppendAllText(csvFilePath, csvLine + "\n");
         }
 
         private void btnMeasureByPost_Click(object sender, EventArgs e)
