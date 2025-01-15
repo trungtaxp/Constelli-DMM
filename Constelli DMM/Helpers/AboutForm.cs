@@ -82,7 +82,6 @@ namespace Constelli_DMM.Helpers
             this.label2.Size = new System.Drawing.Size(319, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Copyright 2023-2024 Constelli Software Inc.\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -105,6 +104,7 @@ namespace Constelli_DMM.Helpers
             this.Controls.Add(this.lblDeveloper);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.lblSoftwareInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AboutForm";
             this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -120,10 +120,5 @@ namespace Constelli_DMM.Helpers
         private Label label2;
         private Label label3;
         private System.Windows.Forms.Label lblDeveloper;
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
