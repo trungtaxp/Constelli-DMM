@@ -556,10 +556,16 @@ namespace Constelli_DMM
         private void LogMeasurement(string measurementType, double result, double expected, double error, string status)
         {
             string logMessage = $"Measurement Type: {measurementType}, Result: {result}, Expected: {expected}, Error: {error}, Status: {status}";
-            // You can change this to log to a file or other logging mechanism
             Console.WriteLine(logMessage);
 
             string csvFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LoadConfiguration/Output/measurement_log.csv");
+            string directoryPath = Path.GetDirectoryName(csvFilePath);
+
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
             string csvLine = $"{measurementType},{result},{expected},{error},{status}";
 
             if (!File.Exists(csvFilePath))
