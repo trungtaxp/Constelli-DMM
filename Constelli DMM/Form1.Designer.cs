@@ -40,16 +40,13 @@ namespace Constelli_DMM
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ReceiveMntText = new System.Windows.Forms.TextBox();
             this.fetchButton = new System.Windows.Forms.Button();
-            this.cboPorts = new System.Windows.Forms.ComboBox();
-            this.btnPortState = new System.Windows.Forms.Button();
-            this.ReadData = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.smnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -143,36 +140,6 @@ namespace Constelli_DMM
             this.fetchButton.UseVisualStyleBackColor = true;
             this.fetchButton.Click += new System.EventHandler(this.fetchButton_Click);
             // 
-            // cboPorts
-            // 
-            this.cboPorts.FormattingEnabled = true;
-            this.cboPorts.Location = new System.Drawing.Point(324, 34);
-            this.cboPorts.Name = "cboPorts";
-            this.cboPorts.Size = new System.Drawing.Size(132, 21);
-            this.cboPorts.TabIndex = 50;
-            // 
-            // btnPortState
-            // 
-            this.btnPortState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnPortState.Location = new System.Drawing.Point(473, 33);
-            this.btnPortState.Name = "btnPortState";
-            this.btnPortState.Size = new System.Drawing.Size(75, 23);
-            this.btnPortState.TabIndex = 51;
-            this.btnPortState.Text = "Closed";
-            this.btnPortState.UseVisualStyleBackColor = true;
-            this.btnPortState.Click += new System.EventHandler(this.btnPortState_Click_1);
-            // 
-            // ReadData
-            // 
-            this.ReadData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.ReadData.Location = new System.Drawing.Point(565, 33);
-            this.ReadData.Name = "ReadData";
-            this.ReadData.Size = new System.Drawing.Size(75, 23);
-            this.ReadData.TabIndex = 52;
-            this.ReadData.Text = "Read Data";
-            this.ReadData.UseVisualStyleBackColor = true;
-            this.ReadData.Click += new System.EventHandler(this.ReadData_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -196,16 +163,23 @@ namespace Constelli_DMM
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(129, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::Constelli_DMM.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Q)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // smnuAbout
+            // 
+            this.smnuAbout.Name = "smnuAbout";
+            this.smnuAbout.Size = new System.Drawing.Size(52, 20);
+            this.smnuAbout.Text = "About";
+            this.smnuAbout.Click += new System.EventHandler(this.smnuAbout_Click);
             // 
             // pictureBox2
             // 
@@ -228,21 +202,11 @@ namespace Constelli_DMM
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // smnuAbout
-            // 
-            this.smnuAbout.Name = "smnuAbout";
-            this.smnuAbout.Size = new System.Drawing.Size(52, 20);
-            this.smnuAbout.Text = "About";
-            this.smnuAbout.Click += new System.EventHandler(this.smnuAbout_Click);
-            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1259, 518);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.ReadData);
-            this.Controls.Add(this.btnPortState);
-            this.Controls.Add(this.cboPorts);
             this.Controls.Add(this.fetchButton);
             this.Controls.Add(this.ReceiveMntText);
             this.Controls.Add(this.pictureBox1);
@@ -277,9 +241,6 @@ namespace Constelli_DMM
         private OpenFileDialog openFileDialog1;
         private TextBox ReceiveMntText;
         private Button fetchButton;
-        private ComboBox cboPorts;
-        private Button btnPortState;
-        private Button ReadData;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem mnuFile;
         private ToolStripSeparator toolStripSeparator1;

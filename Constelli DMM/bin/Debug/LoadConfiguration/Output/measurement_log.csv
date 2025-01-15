@@ -1,0 +1,5 @@
+Measurement Type,Result,Expected,Error,Status
+DCV,8.121559,1,10,Fail
+ACV,0.0007130093,1,1,Fail
+DCV,3.897388,1,10,Fail
+ACV,0.0007336399,1,1,Fail

@@ -10,7 +10,8 @@ namespace Constelli_DMM
     {
         //public static MySqlConnection conn;
         //public static MySqlConnection sec_conn;
-        public static string _BTC_Connection = "TCPIP::192.168.0.101::INSTR";
+        //public static string _BTC_Connection = "TCPIP::192.168.0.101::INSTR";
+        public static string _BTC_Connection = "USB0::0x05E6::0x7510::04638301::INSTR";
         public static string _SFU_Connection = "TCPIP::192.168.148.89::INSTR";
         public static string _SFC_Connection = "TCPIP::192.168.148.90::INSTR";
         public static string TestItemName = "Test_Item_Name";
