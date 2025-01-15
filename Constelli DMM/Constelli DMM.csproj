@@ -138,7 +138,9 @@
     <Content Include="Resources\DCI.png" />
     <Content Include="Resources\DCV.png" />
     <Content Include="Resources\Diode.png" />
+    <None Include="Resources\exit.png" />
     <Content Include="Resources\FreqPer.png" />
+    <None Include="Resources\info.png" />
     <Content Include="Resources\Ratio.png" />
   </ItemGroup>
   <ItemGroup>

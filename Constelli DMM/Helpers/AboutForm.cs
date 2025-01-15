@@ -77,11 +77,11 @@ namespace Constelli_DMM.Helpers
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(2, 319);
+            this.label2.Location = new System.Drawing.Point(-2, 319);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 20);
+            this.label2.Size = new System.Drawing.Size(327, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Copyright 2023-2024 Constelli Software Inc.\r\n";
+            this.label2.Text = "Copyright by Constelli Signals Private Limited.\r\n";
             // 
             // label3
             // 
