@@ -553,12 +553,29 @@ namespace Constelli_DMM
                     break;
             }
         }
+        private void LogMeasurement(string measurementType, double result, double expected, double error, string status)
+        {
+            string logMessage = $"Measurement Type: {measurementType}, Result: {result}, Expected: {expected}, Error: {error}, Status: {status}";
+            // You can change this to log to a file or other logging mechanism
+            Console.WriteLine(logMessage);
+
+            string csvFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "measurement_log.csv");
+            string csvLine = $"{measurementType},{result},{expected},{error},{status}";
+
+            if (!File.Exists(csvFilePath))
+            {
+                File.WriteAllText(csvFilePath, "Measurement Type,Result,Expected,Error,Status\n");
+            }
+
+            File.AppendAllText(csvFilePath, csvLine + "\n");
+        }
+
         private void btnMeasureByPost_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string _measurement = "";
-                
+
                 try
                 {
                     itemDoc.Load(openFileDialog1.FileName);
@@ -575,7 +592,7 @@ namespace Constelli_DMM
                                 SetReceiveMonitor("Result: " + measurementLabel.Text);
                             }
                             else if (specialNode2.Name == "TC_StatusMsg")
-                            {                              
+                            {
                                 SetReceiveMonitor(specialNode2.InnerText.Trim());
                                 System.Threading.Thread.Sleep(1000);
                             }
@@ -591,10 +608,11 @@ namespace Constelli_DMM
                                 error = Convert.ToDouble(specialNode2.InnerText.Trim());
                                 System.Threading.Thread.Sleep(1000);
                             }
-                            
+
                         }
-                        if (expect_result * (1 - error * 0.01) < result && expect_result * (1 + error * 0.01) > result) SetReceiveMonitor("Pass");
-                        else SetReceiveMonitor("Fail");
+                        string status = (expect_result * (1 - error * 0.01) < result && expect_result * (1 + error * 0.01) > result) ? "Pass" : "Fail";
+                        SetReceiveMonitor(status);
+                        LogMeasurement(_measurement, result, expect_result, error, status);
                     }
                 }
                 catch (SecurityException ex)
