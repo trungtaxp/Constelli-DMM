@@ -202,6 +202,7 @@ namespace Constelli_DMM
             // 
             // smnuAbout
             // 
+            this.smnuAbout.Image = global::Constelli_DMM.Properties.Resources.info;
             this.smnuAbout.Name = "smnuAbout";
             this.smnuAbout.Size = new System.Drawing.Size(180, 22);
             this.smnuAbout.Text = "About";
@@ -214,6 +215,7 @@ namespace Constelli_DMM
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::Constelli_DMM.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Q)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
