@@ -559,7 +559,7 @@ namespace Constelli_DMM
             // You can change this to log to a file or other logging mechanism
             Console.WriteLine(logMessage);
 
-            string csvFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "measurement_log.csv");
+            string csvFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LoadConfiguration/Output/measurement_log.csv");
             string csvLine = $"{measurementType},{result},{expected},{error},{status}";
 
             if (!File.Exists(csvFilePath))
@@ -572,6 +572,7 @@ namespace Constelli_DMM
 
         private void btnMeasureByPost_Click(object sender, EventArgs e)
         {
+            openFileDialog1.InitialDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LoadConfiguration/Input");
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string _measurement = "";
@@ -682,7 +683,6 @@ namespace Constelli_DMM
         {
             Application.Exit();
         }
-
 
         private void Ini_UI()
         {

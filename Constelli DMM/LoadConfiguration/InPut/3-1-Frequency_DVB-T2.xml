@@ -1,0 +1,16 @@
+<TC_Change>
+<TC_Item>
+    <SET>DCV</SET>
+    <TC_StatusMsg>Set DCV</TC_StatusMsg>
+    <TC_ExpectResult>1</TC_ExpectResult>
+    <TC_Error>10</TC_Error>
+</TC_Item>
+
+<TC_Item>
+  <SET>ACV</SET>
+  <TC_StatusMsg>Set DCI</TC_StatusMsg>
+  <TC_ExpectResult>1</TC_ExpectResult>
+  <TC_Error>1</TC_Error>
+</TC_Item>
+
+</TC_Change>

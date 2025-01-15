@@ -112,6 +112,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LoadConfiguration\InPut\3-1-Frequency_DVB-T2.xml" />
     <Content Include="Resources\2WOhms.png" />
     <None Include="Resources\wide-logo.png" />
     <None Include="Resources\Ratio1.png" />
@@ -155,6 +156,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="LoadConfiguration\OutPut\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

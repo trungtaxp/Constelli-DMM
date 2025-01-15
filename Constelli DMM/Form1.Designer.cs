@@ -46,10 +46,10 @@ namespace Constelli_DMM
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.smnuAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -100,9 +100,9 @@ namespace Constelli_DMM
             this.btnMeasureByPost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnMeasureByPost.Location = new System.Drawing.Point(198, 32);
             this.btnMeasureByPost.Name = "btnMeasureByPost";
-            this.btnMeasureByPost.Size = new System.Drawing.Size(109, 25);
+            this.btnMeasureByPost.Size = new System.Drawing.Size(121, 25);
             this.btnMeasureByPost.TabIndex = 3;
-            this.btnMeasureByPost.Text = "Measure By Post";
+            this.btnMeasureByPost.Text = "Load Configuration";
             this.btnMeasureByPost.UseVisualStyleBackColor = true;
             this.btnMeasureByPost.Click += new System.EventHandler(this.btnMeasureByPost_Click);
             // 
@@ -176,7 +176,8 @@ namespace Constelli_DMM
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuFile});
+            this.mnuFile,
+            this.smnuAbout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1259, 24);
@@ -186,7 +187,6 @@ namespace Constelli_DMM
             // mnuFile
             // 
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.smnuAbout,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.mnuFile.Name = "mnuFile";
@@ -196,7 +196,16 @@ namespace Constelli_DMM
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(129, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Image = global::Constelli_DMM.Properties.Resources.exit;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Q)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // pictureBox2
             // 
@@ -221,20 +230,10 @@ namespace Constelli_DMM
             // 
             // smnuAbout
             // 
-            this.smnuAbout.Image = global::Constelli_DMM.Properties.Resources.info;
             this.smnuAbout.Name = "smnuAbout";
-            this.smnuAbout.Size = new System.Drawing.Size(132, 22);
+            this.smnuAbout.Size = new System.Drawing.Size(52, 20);
             this.smnuAbout.Text = "About";
             this.smnuAbout.Click += new System.EventHandler(this.smnuAbout_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Image = global::Constelli_DMM.Properties.Resources.exit;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Q)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -283,10 +282,10 @@ namespace Constelli_DMM
         private Button ReadData;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem mnuFile;
-        private ToolStripMenuItem smnuAbout;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem exitToolStripMenuItem;
         private PictureBox pictureBox2;
+        private ToolStripMenuItem smnuAbout;
     }
 }
 
