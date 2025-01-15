@@ -37,7 +37,6 @@ namespace Constelli_DMM
             this.powerButton = new System.Windows.Forms.Button();
             this.powerLabel = new System.Windows.Forms.Label();
             this.btnMeasureByPost = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ReceiveMntText = new System.Windows.Forms.TextBox();
             this.fetchButton = new System.Windows.Forms.Button();
@@ -46,11 +45,14 @@ namespace Constelli_DMM
             this.ReadData = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.smnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.smnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -96,22 +98,13 @@ namespace Constelli_DMM
             this.btnMeasureByPost.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMeasureByPost.AutoSize = true;
             this.btnMeasureByPost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnMeasureByPost.Location = new System.Drawing.Point(181, 32);
+            this.btnMeasureByPost.Location = new System.Drawing.Point(198, 32);
             this.btnMeasureByPost.Name = "btnMeasureByPost";
             this.btnMeasureByPost.Size = new System.Drawing.Size(109, 25);
             this.btnMeasureByPost.TabIndex = 3;
             this.btnMeasureByPost.Text = "Measure By Post";
             this.btnMeasureByPost.UseVisualStyleBackColor = true;
             this.btnMeasureByPost.Click += new System.EventHandler(this.btnMeasureByPost_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Constelli_DMM.Properties.Resources.DCV;
-            this.pictureBox1.Location = new System.Drawing.Point(908, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(316, 188);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // openFileDialog1
             // 
@@ -153,7 +146,7 @@ namespace Constelli_DMM
             // cboPorts
             // 
             this.cboPorts.FormattingEnabled = true;
-            this.cboPorts.Location = new System.Drawing.Point(322, 34);
+            this.cboPorts.Location = new System.Drawing.Point(324, 34);
             this.cboPorts.Name = "cboPorts";
             this.cboPorts.Size = new System.Drawing.Size(132, 21);
             this.cboPorts.TabIndex = 50;
@@ -161,7 +154,7 @@ namespace Constelli_DMM
             // btnPortState
             // 
             this.btnPortState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnPortState.Location = new System.Drawing.Point(477, 33);
+            this.btnPortState.Location = new System.Drawing.Point(473, 33);
             this.btnPortState.Name = "btnPortState";
             this.btnPortState.Size = new System.Drawing.Size(75, 23);
             this.btnPortState.TabIndex = 51;
@@ -172,7 +165,7 @@ namespace Constelli_DMM
             // ReadData
             // 
             this.ReadData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.ReadData.Location = new System.Drawing.Point(567, 33);
+            this.ReadData.Location = new System.Drawing.Point(565, 33);
             this.ReadData.Name = "ReadData";
             this.ReadData.Size = new System.Drawing.Size(75, 23);
             this.ReadData.TabIndex = 52;
@@ -200,25 +193,46 @@ namespace Constelli_DMM
             this.mnuFile.Size = new System.Drawing.Size(37, 20);
             this.mnuFile.Text = "File";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(129, 6);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = global::Constelli_DMM.Properties.Resources.wide_logo;
+            this.pictureBox2.Image = global::Constelli_DMM.Properties.Resources.wide_logo;
+            this.pictureBox2.InitialImage = global::Constelli_DMM.Properties.Resources.wide_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 34);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(175, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 54;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Constelli_DMM.Properties.Resources.DCV;
+            this.pictureBox1.Location = new System.Drawing.Point(908, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(316, 188);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // smnuAbout
             // 
             this.smnuAbout.Image = global::Constelli_DMM.Properties.Resources.info;
             this.smnuAbout.Name = "smnuAbout";
-            this.smnuAbout.Size = new System.Drawing.Size(180, 22);
+            this.smnuAbout.Size = new System.Drawing.Size(132, 22);
             this.smnuAbout.Text = "About";
             this.smnuAbout.Click += new System.EventHandler(this.smnuAbout_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::Constelli_DMM.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Q)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -226,6 +240,7 @@ namespace Constelli_DMM
             // 
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1259, 518);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ReadData);
             this.Controls.Add(this.btnPortState);
             this.Controls.Add(this.cboPorts);
@@ -243,9 +258,10 @@ namespace Constelli_DMM
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONSTELLI";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,6 +286,7 @@ namespace Constelli_DMM
         private ToolStripMenuItem smnuAbout;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private PictureBox pictureBox2;
     }
 }
 
