@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constelli DMM", "Constelli 
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ConstelliSetup", "ConstelliSetup\ConstelliSetup.vdproj", "{6A99046E-F682-437B-97A0-CC9A2F0DC7C9}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ControlLeverTestSetUp", "ControlLeverTestSetUp\ControlLeverTestSetUp.vdproj", "{B23CEF96-DDC1-46B7-8855-8326535A8A39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,8 @@ Global
 		{6617C7F3-0107-45CB-9F3E-E27F1F506405}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A99046E-F682-437B-97A0-CC9A2F0DC7C9}.Debug|Any CPU.ActiveCfg = Debug
 		{6A99046E-F682-437B-97A0-CC9A2F0DC7C9}.Release|Any CPU.ActiveCfg = Release
+		{B23CEF96-DDC1-46B7-8855-8326535A8A39}.Debug|Any CPU.ActiveCfg = Debug
+		{B23CEF96-DDC1-46B7-8855-8326535A8A39}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
