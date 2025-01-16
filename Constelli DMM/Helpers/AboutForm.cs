@@ -40,7 +40,7 @@ namespace Constelli_DMM.Helpers
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(133, 25);
             this.lblVersion.TabIndex = 1;
-            this.lblVersion.Text = "Version: 1.0.2";
+            this.lblVersion.Text = "Version: 1.0.1";
             // 
             // lblDeveloper
             // 

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constelli DMM", "Constelli DMM\Constelli DMM.csproj", "{6617C7F3-0107-45CB-9F3E-E27F1F506405}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ConstelliSetup", "ConstelliSetup\ConstelliSetup.vdproj", "{6A99046E-F682-437B-97A0-CC9A2F0DC7C9}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GeneratorTestSetup", "GeneratorTestSetup\GeneratorTestSetup.vdproj", "{D59D9282-21FB-4540-AEB4-CA751C89F785}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{6617C7F3-0107-45CB-9F3E-E27F1F506405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6617C7F3-0107-45CB-9F3E-E27F1F506405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6617C7F3-0107-45CB-9F3E-E27F1F506405}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A99046E-F682-437B-97A0-CC9A2F0DC7C9}.Debug|Any CPU.ActiveCfg = Debug
-		{6A99046E-F682-437B-97A0-CC9A2F0DC7C9}.Release|Any CPU.ActiveCfg = Release
+		{D59D9282-21FB-4540-AEB4-CA751C89F785}.Debug|Any CPU.ActiveCfg = Debug
+		{D59D9282-21FB-4540-AEB4-CA751C89F785}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
